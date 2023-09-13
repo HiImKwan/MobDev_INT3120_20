@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
         app:title="Donation.1.5"
         app:titleTextColor="@color/white" />
 
@@ -29,20 +29,96 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Please Give Generously"
         android:layout_marginTop="16dp"
+        android:text="Please Give Generously"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="-10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView2">
-        
 
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="PayPal"
+            android:textSize="15dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:text="Direct"
+            android:textSize="15dp" />
+
+    </RadioGroup>
+
+    <NumberPicker
+        android:id="@+id/numberPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView2" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="390dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        android:progress="18"
+        android:progressTint="?attr/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberPicker" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Amount"
+        android:textSize="20dp"
+        android:textColor="#636664"
+        app:layout_constraintTop_toBottomOf="@id/progressBar"
+        app:layout_constraintStart_toStartOf="@id/textView2"/>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="280dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintEnd_toEndOf="@id/progressBar"
+        app:layout_constraintTop_toBottomOf="@id/progressBar" />
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button"
+        app:backgroundTint="#d2d9d4"
+        android:textColor="@color/black"
+        android:text="Donate"
+        app:layout_constraintBottom_toBottomOf="@id/textView4"
+        app:layout_constraintStart_toStartOf="@id/radioGroup"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"/>
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total so far $1998"
+        app:layout_constraintStart_toEndOf="@id/button1"
+        app:layout_constraintTop_toBottomOf="@id/editText"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="70dp"
+        android:textSize="20dp"
 
 </androidx.constraintlayout.widget.ConstraintLayout>
