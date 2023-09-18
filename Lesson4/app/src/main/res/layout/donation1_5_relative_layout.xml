@@ -10,7 +10,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         app:title="Donation.1.5"
-        app:titleTextColor="@color/white"
+        app:titleTextColor="@color/white"/>
 
     <TextView
         android:id="@+id/welcomeHomer"

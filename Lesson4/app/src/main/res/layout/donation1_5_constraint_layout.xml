@@ -21,7 +21,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="12dp"
         android:text="Welcome Homer"
-        android:textSize="25dp"
+        android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Please Give Generously"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -49,14 +49,14 @@
             android:layout_height="wrap_content"
             android:checked="true"
             android:text="PayPal"
-            android:textSize="15dp" />
+            android:textSize="15sp" />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="-10dp"
             android:text="Direct"
-            android:textSize="15dp" />
+            android:textSize="15sp" />
 
     </RadioGroup>
 
@@ -85,7 +85,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="Amount"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textColor="#636664"
         app:layout_constraintTop_toBottomOf="@id/progressBar"
         app:layout_constraintStart_toStartOf="@id/textView2"/>
@@ -119,6 +119,6 @@
         app:layout_constraintTop_toBottomOf="@id/editText"
         android:layout_marginTop="40dp"
         android:layout_marginStart="70dp"
-        android:textSize="20dp"
+        android:textSize="20sp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
