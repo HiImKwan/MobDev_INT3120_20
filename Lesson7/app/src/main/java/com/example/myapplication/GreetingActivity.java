@@ -33,11 +33,6 @@ public class GreetingActivity extends AppCompatActivity {
     }
 
     public void goBack() {
-        onBackPressed();
-    }
-
-    @Override
-    public void finish() {
         Intent data = new Intent();
         String feedback = "OK, Hello " + name + ". How are you?";
         data.putExtra("feedback", feedback);

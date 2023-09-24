@@ -32,14 +32,14 @@ public class MainActivity extends AppCompatActivity {
 
         sendMessage.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 sendMessage();
             }
         });
 
         call.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 EditText phoneNumber = findViewById(R.id.editCall);
                 Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("Tel:" + phoneNumber.getText().toString()));
                 startActivity(intent);
@@ -70,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
     public void sendMessage() {
         String fullName = this.editTextName.getText().toString();
         String message = "Hello, Please say hello to me!";
-
         Intent intent = new Intent(this, GreetingActivity.class);
         intent.putExtra("fullName", fullName);
         intent.putExtra("message", message);
