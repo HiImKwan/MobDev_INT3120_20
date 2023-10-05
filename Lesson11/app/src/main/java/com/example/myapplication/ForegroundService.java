@@ -30,16 +30,16 @@ public class ForegroundService extends Service {
                 }
         ).start();
 
-        final String CHANNELID = "FOREGROUND SERVICE ID";
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        final String CHANNEL_ID = "FOREGROUND SERVICE ID";
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             NotificationChannel channel = new NotificationChannel(
-                    CHANNELID,
-                    CHANNELID,
+                    CHANNEL_ID,
+                    CHANNEL_ID,
                     NotificationManager.IMPORTANCE_LOW
             );
 
             getSystemService(NotificationManager.class).createNotificationChannel(channel);
-            Notification.Builder notification = new Notification.Builder(this, CHANNELID)
+            Notification.Builder notification = new Notification.Builder(this, CHANNEL_ID)
                     .setContentText("Foreground service is running...")
                     .setContentTitle("Foreground service is enable")
                     .setSmallIcon(R.drawable.ic_launcher_background);
