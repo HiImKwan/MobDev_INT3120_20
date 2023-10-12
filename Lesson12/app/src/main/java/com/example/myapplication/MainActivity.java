@@ -22,7 +22,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        compassButton = findViewById(R.id.magnetometer);
+        cameraButton = findViewById(R.id.cameraButton);
+        wifiButton = findViewById(R.id.wifiButton);
+        bluetoothButton = findViewById(R.id.bluetoothButton);
+        telephoneButton = findViewById(R.id.telephoneButton);
         compassButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

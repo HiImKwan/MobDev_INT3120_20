@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/magnetometer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Magneto Meter"
@@ -14,10 +15,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2"/>
+        app:layout_constraintVertical_bias="0.3"/>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/wifiButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Wifi"
@@ -25,9 +26,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3"/>
+        app:layout_constraintVertical_bias="0.4"/>
 
     <Button
+        android:id="@+id/telephoneButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Telephone"
@@ -35,18 +37,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4"/>
+        app:layout_constraintVertical_bias="0.5"/>
 
     <Button
+        android:id="@+id/cameraButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Camera"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6"/>
 
     <Button
+        android:id="@+id/bluetoothButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bluetooth"
@@ -54,6 +59,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6" />
+        app:layout_constraintVertical_bias="0.7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
