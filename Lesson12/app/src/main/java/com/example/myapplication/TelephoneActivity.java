@@ -1,4 +1,7 @@
 package com.example.myapplication;
 
-public class TelephoneActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class TelephoneActivity extends AppCompatActivity {
+
 }
