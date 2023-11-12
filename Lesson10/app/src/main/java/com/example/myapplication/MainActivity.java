@@ -1,11 +1,15 @@
 package com.example.myapplication;
 
+import static android.provider.ContactsContract.RawContacts.*;
+import static android.provider.ContactsContract.RawContacts.ACCOUNT_TYPE;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.app.Activity;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
@@ -14,6 +18,13 @@ import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.content.ContentResolver;
+import android.content.ContentValues;
+import android.provider.ContactsContract;
+import android.provider.ContactsContract.CommonDataKinds;
+import android.provider.ContactsContract.RawContacts;
+import android.provider.ContactsContract.Data;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,12 +34,25 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button button = findViewById(R.id.get_contact);
+        Button genContact = findViewById(R.id.gen_contact);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 getContact();
             }
         });
+        genContact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                genContact();
+            }
+        });
+    }
+
+    private void genContact() {
+        // To display a short toast message
+        Toast toast = Toast.makeText(getApplicationContext(), "App cc", Toast.LENGTH_SHORT);
+        toast.show();
     }
 
     public void getContact() {
@@ -41,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         ContentResolver contentResolver = getContentResolver();
+
         Uri uri = ContactsContract.CommonDataKinds.Phone.CONTENT_URI;
         Cursor cursor = contentResolver.query(uri, null, null, null, null);
         Log.i("CONTENT_PROVIDER_DEMO", "Total number of contacts: " + Integer.toString(cursor.getCount()));
