@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
 //        Intent serviceIntent = new Intent(this, BackgroundService.class);
 //        startService(serviceIntent);
     }
-
     public boolean foregroundServiceRunning() {
         ActivityManager activityManager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
         for(ActivityManager.RunningServiceInfo service: activityManager.getRunningServices(Integer.MAX_VALUE)) {

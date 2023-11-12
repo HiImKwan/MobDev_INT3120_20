@@ -23,7 +23,9 @@
             </intent-filter>
         </activity>
         <service android:name=".BackgroundService"></service>
-        <service android:name=".ForegroundService"></service>
+        <service android:name=".ForegroundService"
+            android:enabled="true"
+            android:exported="false"/>
         <receiver android:name=".MyBroadcastReceiver"
             android:exported="true">
             <intent-filter>
